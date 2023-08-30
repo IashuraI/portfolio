@@ -1,0 +1,31 @@
+li{
+    border: 0em;
+    background-color: var(--bs-light);
+    padding-left: 0;
+}
+
+.portrait {
+    background-image: url("https://printstudio.top/image/catalog/foto/1_shengen_uk.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid #2d2e32;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    height: 20rem;
+    transition: all 1s ease-in-out;
+    width: 20rem;
+}
+
+.left-logo{
+    padding: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x);
+    padding-left: 0;
+}
+
+i{
+    font-size: 25px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
