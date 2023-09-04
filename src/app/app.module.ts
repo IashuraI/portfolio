@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
-import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProjectCardComponent } from './components/projects/project-card/project-card.component';
+import { ProjectDetailComponent } from './components/projects/project-detail/project-detail.component';
+import { ProjectCarouselComponent } from './components/projects/project-carousel/project-carousel.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,11 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     HomeComponent,
     AboutComponent,
-    ProjectsComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectCardComponent,
+    ProjectDetailComponent,
+    ProjectCarouselComponent
   ],
   imports: [
     BrowserModule,
