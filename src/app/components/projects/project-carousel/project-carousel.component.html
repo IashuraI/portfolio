@@ -12,9 +12,11 @@
                                 <app-project-card [project]="col" ></app-project-card>
                             </div>
                         </div>
-                        <app-project-detail *ngFor="let col of newProjectList[i]" [project]="col"></app-project-detail>
                     </div>
                 </div>
+            </div>
+            <div *ngFor="let row of newProjectList; let i = index">
+                <app-project-detail *ngFor="let col of newProjectList[i]" [project]="col"></app-project-detail>
             </div>
         </div>
         <div class="d-flex justify-content-around">

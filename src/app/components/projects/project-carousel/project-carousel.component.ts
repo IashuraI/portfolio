@@ -10,15 +10,11 @@ export class ProjectCarouselComponent implements OnInit {
   @ViewChild('carousel') carousel: ElementRef;
 
   projectList: Project[] = [
-    { id: 1, title: "Shit", description: "ok"},
-    { id: 2, title: "Shit2", description: "ok2"},
-    { id: 3, title: "Shit3", description: "ok3"},
-    { id: 4, title: "Shit4", description: "ok3"},
-    { id: 5, title: "Shit5", description: "ok4"},
-    { id: 6, title: "Shit6", description: "ok5"},
-    { id: 7, title: "Shit7", description: "ok6"},
-    { id: 8, title: "Shit8", description: "ok7"},
-    { id: 9, title: "Shit9", description: "ok8"}
+    { id: 1, title: "Dotnet scheduling service with Quartz", img: "https://www.upwork.com/att/download/portfolio/persons/uid/1451992081407647744/profile/projects/files/d28344ce-a408-430b-be45-11fa6fcd3882", role: ".Net Software Enginee", 
+    goal: "Client had project which uses Quartz.NET for reccuring tasks. He wanted to be sure that if app is down for 24 hours his task which is ment to be run every hour will be fired 24 times after starting app.", 
+    skills: ["SQLQuartz Scheduling ASP.NET Web API API PostgreSQL Server ASP.NET Core"], solution:"I've created service which uses last fire time from Quartz.NET + Postgresql integration and calculates properly the amount of fires left.", 
+    solutionImg: "https://www.upwork.com/att/download/portfolio/persons/uid/1451992081407647744/profile/projects/files/df3554b4-d0d7-42d7-abe0-1718c669631c",
+    solutionUrl: "https://github.com/IashuraI/QuartzScheduler"},
   ];
 
   carouselCommand: string = "carousel";
