@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const dir = "src/environments"
-const file = "environment.ts"
+const file = "environment.prod.ts"
 
 const content = process.env.EMAILJS_PUBLIC_KEY;
 
