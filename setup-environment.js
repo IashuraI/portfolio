@@ -4,7 +4,7 @@ const path = require("path");
 const dir = "src/environments"
 const file = "environment.prod.ts"
 
-const content = process.env.EMAILJS_PUBLIC_KEY;
+const content = '${process.env.EMAILJS_PUBLIC_KEY}';
 
 fs.access(dir, fs.constants.F_OK, (err) => {
     try{
