@@ -1,27 +1,23 @@
-name: Build and Deploy Github Pages
-
+name: Build and Deploy
 on:
   push:
     branches:
       - master
 jobs:
   build:
+
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.8.0]
+
     steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: npm install, build, and test
-        run: |
-          npm install -g @angular/cli
-          npm ci
-          ng deploy --repo=https://github.com/IashuraI/portfolio.git --message="Built from ${GITHUB_SHA} in the source repository." --branch=master
-        env:
-          CI: true
-          GH_TOKEN: ${{ secrets.GithubToken }}
-          EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
+    - uses: actions/checkout@v3
+    - name: Angular Deploy gh-pages Actions
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
+      with:
+        github_access_token: ${{ secrets.GITHUB_TOKEN }} # see the Configuration section for how you can create secrets
+        build_configuration: staging # The build environment for the app. please look configurations in your angular.json
+        base_href: https://github.com/IashuraI/portfolio.git   # make sure this corresponds to https://<your_username>.github.io/<base_href>/
+        deploy_branch: gh-pages # The branch the action should deploy to.
+        angular_dist_build_folder: dist/portfolio # The folder where your project is supposed to be after running ng build by the action.
+
+permissions:
+  contents: write # Allow write permission to GITHUB_TOKEN to commit to deploy branch.
