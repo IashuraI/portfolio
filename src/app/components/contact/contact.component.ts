@@ -22,7 +22,7 @@ export class ContactComponent {
   });
   
   send(){
-    console.log(environment.emailjs_public_key);
+    emailjs.init('yqCpkvt9KBBKcQGe2');
     emailjs.send('service_kzd9i0k','template_swzdbha', {
       to_name : this.form.value.to_name,
       from_name: this.form.value.from_name,
