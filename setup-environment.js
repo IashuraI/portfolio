@@ -9,7 +9,7 @@ const content = process.env.EMAILJS_PUBLIC_KEY;
 fs.access(dir, fs.constants.F_OK, (err) => {
     try{
         fs.writeFileSync(dir + "/" + file, content);
-        console.log("lucky");
+        console.log(content);
     }
     catch{
         console.log("unlucky");
