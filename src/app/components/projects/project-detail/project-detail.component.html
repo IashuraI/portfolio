@@ -1,0 +1,36 @@
+<div class="modal fade" id="detail{{project.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">{{project.title}}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <strong>Role</strong>
+                <p>{{project.role}}.Net Software Enginee</p>
+            </div>
+            <div class="row">
+              <strong>Project goal</strong>
+              <p>{{project.goal}}</p>
+              <img width="100%" height="100%" src="{{project.img}}">
+            </div>
+            <div class="row">
+              <strong>Skills and deliverables</strong>
+              <p>{{project.skills}}</p>
+            </div>
+            <div class="row">
+              <strong>Solution</strong>
+              <p>{{project.solution}}</p>
+              <img width="300px" height="300px" src="{{project.solutionImg}}">
+              <i style="font-size: small;">Service for calculating amount of jobs to be done</i>
+              <a *ngIf="project.solutionUrl != '' " style="text-decoration: none; color: green" target="_blank" class="link" href="{{project.solutionUrl}}">Check out full solution on GitHub!</a>
+            </div>
+            <div class="row mt-3 text-end">
+              <strong class="mb-1"><a style="text-decoration: none; color: green" target="_blank" href="https://www.upwork.com/jobs/~01be3f715877402c71">Check out job on Upwork!</a></strong>
+              <p>August 2023</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,13 @@
+li{
+    border: 0em;
+    background-color: var(--bs-light);
+}
+
+i{
+    font-size: 25px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}

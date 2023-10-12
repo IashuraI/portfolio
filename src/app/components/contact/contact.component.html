@@ -1,0 +1,23 @@
+<div [formGroup]="form" class="row justify-content-center p-5">
+    <div class="col d-flex justify-content-center align-items-center pb-5" style="min-width: fit-content;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnq27x0lL7QadPssIliC6-SfKumesZuf3snw&usqp=CAU" alt="IMG">
+    </div>
+    <form class="col justify-content-center text-center" (submit)="send()">
+        <h4 class="mb-3 mt-3">
+            Get in touch
+        </h4>
+        <div class="mb-3">
+            <input formControlName="from_email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@example.com">
+        </div>
+        <div class="mb-3">
+            <input formControlName="from_name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+        </div>
+        <div class="mb-3">
+            <textarea formControlName="message" class="form-control" placeholder="Message" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <button type="submit" data-bs-toggle="modal" data-bs-target="#alertModal" class="btn hover-underline-animation">Send</button>
+        </div>
+    </form>
+    <app-alert-dialog [text]="messageText" [header]="headerText"></app-alert-dialog>
+</div>
