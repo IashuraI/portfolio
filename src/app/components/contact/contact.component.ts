@@ -29,7 +29,7 @@ export class ContactComponent {
       message : this.form.value.message,
       from_email: this.form.value.from_email
     } , 
-    environment.emailjs_public_key)
+    "yqCpkvt9KBBKcQGe2")
     .then((response) => {
        this.messageText = "Your message have been sent. I will reach out to you soon :)";
        this.headerText = "Success!";
