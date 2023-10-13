@@ -22,7 +22,7 @@ export class ContactComponent {
   });
   
   async send(){
-    this.messageText = environment.emailjs_public_key;
+    this.messageText = "key:" + environment.emailjs_public_key;
     emailjs.init(environment.emailjs_public_key);
     await emailjs.send('service_kzd9i0k','template_swzdbha', {
        to_name : this.form.value.to_name,
