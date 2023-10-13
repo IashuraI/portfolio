@@ -8,7 +8,7 @@ const content = process.env.EMAILJS_PUBLIC_KEY;
 
 fs.access(dir, fs.constants.F_OK, (err) => {
     try{
-        fs.writeFileSync(dir + "/" + file, content);
+        fs.writeFileSync(/workspaces/portfolio/src/environments/environment.prod.ts, content);
         console.log(content);
     }
     catch{
