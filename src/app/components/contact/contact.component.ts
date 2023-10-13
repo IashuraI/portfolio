@@ -23,19 +23,19 @@ export class ContactComponent {
   
   async send(){
     emailjs.init("yqCpkvt9KBBKcQGe2");
-    await emailjs.send('service_kzd9i0k','template_swzdbha', {
-      to_name : this.form.value.to_name,
-      from_name: this.form.value.from_name,
-      message : this.form.value.message,
-      from_email: this.form.value.from_email
-    })
-    .then((response) => {
-       this.messageText = "Your message have been sent. I will reach out to you soon :)";
-       this.headerText = "Success!";
-    }, (err) => {
-      this.messageText = 'Failed. Try to catch up with me in LinkedIn then :)';
-      this.headerText = "Failure!";
-    });
+    // await emailjs.send('service_kzd9i0k','template_swzdbha', {
+    //   to_name : this.form.value.to_name,
+    //   from_name: this.form.value.from_name,
+    //   message : this.form.value.message,
+    //   from_email: this.form.value.from_email
+    // })
+    // .then((response) => {
+    //    this.messageText = "Your message have been sent. I will reach out to you soon :)";
+    //    this.headerText = "Success!";
+    // }, (err) => {
+    //   this.messageText = 'Failed. Try to catch up with me in LinkedIn then :)';
+    //   this.headerText = "Failure!";
+    // });
     this.form.reset();
   }
 }
