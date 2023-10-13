@@ -34,6 +34,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "https://github.com/IashuraI/portfolio.git",
               "budgets": [
                 {
                   "type": "initial",
