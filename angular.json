@@ -55,7 +55,7 @@
                 "styles": {
                   "minify": true,
                   "inlineCritical": false
-                },
+                }, 
                 "fonts": true
               },
               "vendorChunk": true,
