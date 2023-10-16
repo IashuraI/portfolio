@@ -13,9 +13,6 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: latest
-    - run: node setup-environment.js
-      env: 
-        EMAILJS_PUBLIC_KEY: '${{ secrets.EMAILJS_PUBLIC_KEY }}'
     - name: Angular Deploy gh-pages Actions
       uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
       with:
