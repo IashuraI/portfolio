@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import emailjs from '@emailjs/browser';
-import { environment } from './../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -22,8 +21,7 @@ export class ContactComponent {
   });
   
   async send(){
-    this.messageText = "key:" + environment.emailjs_public_key;
-    emailjs.init(environment.emailjs_public_key);
+    emailjs.init("yqCpkvt9KBBKcQGe2");
     await emailjs.send('service_kzd9i0k','template_swzdbha', {
        to_name : this.form.value.to_name,
        from_name: this.form.value.from_name,
